@@ -1,0 +1,107 @@
+<!doctype>
+<html>
+	<head>
+	<meta charset="utf-8"/>
+	<title>Snow flakes effect</title>
+	<style>
+		body{
+			margin:0;
+		}
+
+		canvas {
+			background-color: #003b6f;
+		}
+	</style>
+	</head>
+	<body>
+		<canvas id = "myCanvas"></canvas>
+		<script>
+			canvas = document.getElementById('myCanvas');
+			canvas.height = window.innerHeight;
+			canvas.width = window.innerWidth;
+			console.log(canvas.height,canvas.width);
+
+			ctx = canvas.getContext('2d');
+
+			function Flakes(x,y,r,dx,dy){
+				this.x = x;
+				this.y = y;
+				this.r = r;
+				this.dx = dx;
+				this.dy = dy;
+				this.draw = function(){
+					ctx.beginPath();
+					ctx.arc(this.x,this.y,this.r,0,Math.PI*2,false);
+					ctx.fillStyle = 'white';
+					ctx.fill();
+				}
+				this.update = function(){
+					if(this.y-this.r > canvas.height){
+						this.y = 0;
+					}
+					if(this.x-this.r > canvas.width)
+					{
+						this.x = 0;
+					} 
+					this.x += this.dx;
+					this.y += this.dy;
+
+					this.draw();
+				}
+			}
+
+			//var myFlakes = new Flakes(20,20,20,5,10);
+			var flakesArray = [];
+
+			for(i=0;i<50;i++){
+				var x = (Math.random()*canvas.width) - r;
+				var y = (Math.random()*canvas.height) - r;
+				var r = 5;
+				var dx = 4;
+				var dy = 6;
+				flakesArray.push(new Flakes(x,y,r,dx,dy));
+			}
+
+			for(i=0;i<50;i++){
+				var x = (Math.random()*canvas.width) - r;
+				var y = (Math.random()*canvas.height) - r;
+				var r = 5;
+				var dx = -0.5;
+				var dy = 8;
+				flakesArray.push(new Flakes(x,y,r,dx,dy));
+			}
+
+
+
+			function animate(){
+				ctx.clearRect(0,0,canvas.width,canvas.height);
+				requestAnimationFrame(animate);
+				for(i=0;i<flakesArray.length;i++){
+					flakesArray[i].update();
+				}
+			}
+
+			animate();
+
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		</script>
+	</body>
+</html>

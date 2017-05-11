@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Color circle animation experiment</title>
+		<style>
+			body{
+				margin:0;
+			}
+			canvas {
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas class ='myCanvas'></canvas>
+		<script>
+			canvas = document.querySelector('.myCanvas');
+			canvas.width = window.innerWidth;
+			canvas.height = window.innerHeight;
+			console.log(canvas.width,canvas.height);
+
+			ctx = canvas.getContext('2d');
+
+			function Circle(x,y,r,dx,dy){
+				this.x = x;
+				this.y = y;
+				this.r = r;
+				this.dx = dx;
+				this.dy = dy;
+				this.color = function(){
+					var grad = ctx.createRadialGradient(this.x,this.y,0,this.x,this.y,this.r);
+					var colorArray = ['green','red','yellow','blue','purple'];
+
+					//error message displayed as"fail to excute createRadialGradient,the provided double value is non-finite",the error code as high-lighted below:
+
+					/* 
+
+					grad.addColorStop(0,colorArray[Math.floor(Math.random()*colorArray.length)]);
+					grad.addColorStop(.4,colorArray[Math.floor(Math.random()*colorArray.length)]);
+					grad.addColorStop(.6,colorArray[Math.floor(Math.random()*colorArray.length)]);
+					grad.addColorStop(.8,colorArray[Math.floor(Math.random()*colorArray.length)]);
+					grad.addColorStop(.1,colorArray[Math.floor(Math.random()*colorArray.length)]);
+					
+					*/
+					return grad;
+				}
+
+				this.draw = function(){
+					ctx.beginPath();
+					ctx.arc(this.x,this.y,this.r,0,Math.PI*2);
+					ctx.fillStyle = this.color();
+					ctx.fill();
+				}
+
+				this.update = function(){
+					if((this.x + this.r > canvas.width)||(this.x < this.r)){
+						this.dx = -this.dx;
+					}
+
+					if((this.y + this.r > canvas.height)||(this.y < this.r)){
+						this.dy = -this.dy;
+					}
+
+					this.x+=this.dx;
+					this.y+=this.dy;
+
+					this.draw();
+				}
+			}
+
+			var circleArray = [];
+
+			for(i=0;i<40;i++){
+				var x = Math.random()*canvas.width - r;
+				var y = Math.random()*canvas.height - r;
+				var r = 15;
+				var dx = 3;
+				var dy = 3;
+				var myCircle = new Circle(x,y,r,dx,dy);
+
+				circleArray.push(myCircle);
+			}
+		
+
+
+
+
+			function animate(){
+				ctx.clearRect(0,0,canvas.width,canvas.height);
+				requestAnimationFrame(animate);
+				for(i=0;i<circleArray.length;i++){
+					circleArray[i].update();
+				}
+				
+			}
+
+			//animate();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		</script>
+	</body>
+</html>
