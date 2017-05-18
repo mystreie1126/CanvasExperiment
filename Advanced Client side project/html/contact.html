@@ -1,0 +1,114 @@
+<html>
+<head>
+<link rel='stylesheet' type='text/css' href='../css/bootstrap.min.css'/>
+<link rel='stylesheet' type='text/css' href='../css/titan.css'/>
+<link rel='stylesheet' type='text/css' href='../css/media-queries.css'/>
+
+</head>
+<body>
+<div class="titan-wrap">
+    <header id="titan-header" class="navbar navbar-inverse navbar-fixed-top">
+        <nav class="titan-navbar ">
+            <div id="titan-header-left" class="titan-navbar-cell">
+                <div class='float-lef'>
+                <div class="logo"> <a href="index.html" class="logo-link">WEB OF ART</a></div>
+                </div>
+            </div>
+            <div id="titan-header-center" class="titan-navbar-cell">
+                <a href="index.html" class="titan-top-nav-link is-inactive">HOME</a>
+                <a href="about.html" class="titan-top-nav-link is-inactive">ABOUT</a>
+                <a href="contact.html" class="titan-top-nav-link is-inactive about">CONTACT</a>
+                
+            </div>
+            <div id="titan-header-right" class="titan-navbar-cell">                
+            </div>
+        </nav>
+    </header> 
+
+
+    <div class='summary-container'>
+        <div class="container">
+            <div class="">
+    <div class="" id="contact-modal" tabindex="-1" role="dialog" aria-labelledby="contact-modal-label" aria-hidden="true">
+        <div class="table"> <div class="table-cell">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header" >
+                    <h2 class="modal-title" id="myModalLabel">CONTACT US</h2>
+                </div>
+                <div class="modal-body contact-modal">
+                    <p class="fat-font"> WEB OF ART</p>
+                    <br/>
+                    <div class="clearfix"></div>
+                    <div id='contact'>
+                        <form id="contact-form">
+                        <div class="form-group"> 
+                            <span id="form_error_name" class="error"></span>                           
+                            <input type="text" id="form_name" placeholder="* Your Name" value="" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <span id="form_error_email" class="error"></span> 
+                            <input type="text" id="form_email" placeholder="* Your Email" value="" class="form-control">
+
+                        </div>
+
+                        <div class="form-group">
+                            <span id="form_error_phone" class="error"></span> 
+                            <input type="text" id="form_phone" placeholder="* Your Phone Number" value="" class="form-control">
+
+                        </div>
+
+                        <div class="form-group">
+                            <span id="form_error_message" class="error"></span> 
+                            <textarea id="form_message" name="formmessage" placeholder="* Your Message" value="" class="form-control"></textarea>
+                        </div>
+
+                        <a href="#" id="submit_button" class="btn btn-success"><span> SUBMIT </span></a>
+                        </form>
+                    </div>
+                    <div class="modal-body" id="server_message">
+                    </div>
+                </div> <!-- end modal-body -->
+            </div> <!-- end model-content -->
+            
+        </div> <!-- end modal-dialog -->
+        </div></div> <!-- end table  table-cell -->
+    </div> <!-- end modal contact -->
+
+</div>
+    
+        </div>
+    </div>
+
+    <div id="footer">
+      <div class="container">
+        
+       <div class='row'>
+            <span > <a href="about.html" > About </a></span>
+			<span > <a href="contact.html" > Contact </a></span>
+			<span > <a href="index.html" > Home </a></span>
+        </div>
+        
+        
+       
+        <div class="row">
+            <p > ACSS CA2 by Jianqi lu</p>
+        </div>
+        
+      </div>
+      
+    </div>
+</div> 
+    
+
+
+<script type='text/javascript' src='../js/jquery.js'></script>
+<script type='text/javascript' src='../js/bootstrap.min.js'></script>
+<script type='text/javascript' src='../js/titan.js'></script>
+
+<script type='text/javascript'>
+    $("body").makeFormValidation();
+</script>
+</body>
+</html>

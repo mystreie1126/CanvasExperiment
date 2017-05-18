@@ -1,0 +1,258 @@
+<html>
+<head>
+<link rel='stylesheet' type='text/css' href='../css/bootstrap.min.css'/>
+<link rel='stylesheet' type='text/css' href='../css/titan.css'/>
+<link rel='stylesheet' type='text/css' href='../css/media-queries.css'/>
+
+<link href='../fullcalendar/fullcalendar.css' rel='stylesheet' />
+<link href='../fullcalendar/fullcalendar.print.css' rel='stylesheet' media='print' />
+<style>
+
+
+    #calendar {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+</style>
+</head>
+<body>
+<div class="titan-wrap">
+    <header id="titan-header" class="navbar navbar-inverse navbar-fixed-top">
+        <nav class="titan-navbar ">
+            <div id="titan-header-left" class="titan-navbar-cell">
+                <div class='float-lef'>
+                <div class="logo"> <a href="index.html" class="logo-link">WEB OF ART</a></div>
+                </div>
+            </div>
+            <div id="titan-header-center" class="titan-navbar-cell">
+                <a href="index.html" class="titan-top-nav-link is-inactive">HOME</a>
+                <a href="about.html" class="titan-top-nav-link is-inactive">ABOUT</a>
+                <a href="contact.html" class="titan-top-nav-link is-inactive about">CONTACT</a>
+               
+            </div>
+            <div id="titan-header-right" class="titan-navbar-cell">
+            </div>
+        </nav>
+    </header> 
+
+    <div class="container">
+        <div class="row competencies" id="competencies">
+            <div class="col-lg-12">
+                <h1 class="page-header">
+                    OUR CORE COMPETENCIES
+                </h1>
+            </div>
+            <div class="col-md-3">
+                <div class="panel">
+                    <div class="title">
+                        <h4>PROPRIETARY INDEX</h4>
+                    </div>
+                    <div class="content">
+                        <p>Our proprietary online Fine Art Index helps
+
+                            researchers discover, learn about, collect, 
+
+                            and appraise the world&#39;s best undervalued 
+
+                            original art by the greatest artists of all time. 
+
+                            Get research, values, forecasts and more. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 gray">
+                <div class="panel">
+                    <div class="title">
+                        <h4>FREE CUSTOMIZED ANALYSIS</h4>
+                    </div>
+                    <div class="content">
+                        <p>Nobody provides free art analysis like us!
+
+                            Our exclusive art database with its patent 
+
+                            pending software solutions & customizable 
+
+                            interface, grants users sweeping, in depth  
+
+                            analytics on all their favorite artists work. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="panel">
+                    <div class="title">
+                        <h4>ART CONSULTANCY</h4>
+                    </div>
+                    <div class="content">
+                        <p>Discovering great opportunities in art is 
+
+                            an art unto itself. Even returns on a given 
+
+                            artists works vary dramatically due to a 
+
+                            host of different reasons. Clearly, not all
+
+                            investment quality art is created equal. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 gray">
+                <div class="panel">
+                    <div class="title">
+                        <h4>ART FORECASTING MODELS</h4>
+                    </div>
+                    <div class="content">
+                        <p>Many times more is required than having 
+
+                        a thorough understanding of today&#39;s art 
+
+                        market. Our proprietary database affords 
+
+                        users the ability to develop sophisticated, 
+
+                        custom tailored art forecasting models.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row competencies" id="artists">
+            <h1 class="page-header" > OUR ARTISTS </h1>
+            <div class="col-lg-12" >
+
+                <p style="padding-top:15px; padding-bottom:5px;">
+                All artists and galleries are invited to participate in this website and Holiday Open Studios & Galleries. <br/>
+
+The mission of Artists in WEB OF ART, Inc: <br/>
+
+Support, promote and increase the visibility of regional artists, galleries, museums and related arts businesses
+Provide a substantial visual resource that conveys the quality and breadth of art created in our area
+Provide a unique opportunity for the greater community to visit artists in their working environment
+Support WEB OF ART  in its quest to be identified as a strong cultural center and its emergence as an arts destination
+To fulfill this mission there are currently the 2 areas of concentration including: <br/>
+
+Website to highlight individual artists and galleries. This website was redesigned thanks to the generous donation from the Margaret L.Wendt Foundation and the creative and technical talents of Scott Wise of Visual Inclination. There are no fees associated with being listed on the website. It is important to represent the breadth and depth of incredible talent working in the region.  It showcases the area as an arts destination for visitors and prospective employees and employers highlighting the cultural and artistic treasures in the city and region. <br/>
+
+Holiday Open Studios and Galleries is held annually the first weekend in December. This event is very successful, and brings thousands of visitors from the city and surrounding area to participating artist studios and local galleries. We provide umbrella advertising and promotion to any artist and gallery in our map area who would like to participate. Complete the form letting us know where you will be. Every attempt is made to help artists who do not have a suitable exhibit space in WEB OF ART find an appropriate venue for this weekend. Go to contact page to message us! <br/>
+
+Currently, all organizational work is performed by volunteer staff, all comers are welcome!
+            </p>
+            </div>
+       
+        </div>
+
+        <div class="row competencies" id="our_calendar">
+            <h1 class="page-header">OUR CALENDAR </h1>
+            <div id="calendar"></div>
+        </div>
+    </div>
+   
+    <div id="footer">
+      <div class="container">
+        
+       <div class='row'>
+            <span > <a href="about.html" > About </a></span>
+			<span > <a href="contact.html" > Contact </a></span>
+			<span > <a href="index.html" > Home </a></span>
+        </div>
+        
+        
+       
+        <div class="row">
+            <p > ACSS CA2 by Jianqi lu</p>
+        </div>
+        
+      </div>
+      
+    </div>
+</div> 
+    
+
+<script type='text/javascript' src='../js/jquery.js'></script>
+<script type='text/javascript' src='../js/bootstrap.min.js'></script>
+<script type='text/javascript' src='../js/titan.js'></script>
+
+<script src='../fullcalendar/lib/moment.min.js'></script>
+<script src='../fullcalendar/fullcalendar.min.js'></script>
+<script>
+
+    $(document).ready(function() {
+        
+        $('#calendar').fullCalendar({
+            header: {
+                left: 'prev,next today',
+                center: 'title',
+                right: 'month,agendaWeek,agendaDay'
+            },
+            defaultDate: '2015-08-19',
+            editable: true,
+            eventLimit: true, // allow "more" link when too many events
+            events: [
+                {
+                    title: 'All Day Event',
+                    start: '2015-08-01'
+                },
+                {
+                    title: 'Long Event',
+                    start: '2015-08-07',
+                    end: '2015-08-10'
+                },
+                {
+                    id: 999,
+                    title: 'Repeating Event',
+                    start: '2015-08-09T16:00:00'
+                },
+                {
+                    id: 999,
+                    title: 'Repeating Event',
+                    start: '2015-08-16T16:00:00'
+                },
+                {
+                    title: 'Conference',
+                    start: '2015-08-11',
+                    end: '2015-08-13'
+                },
+                {
+                    title: 'Meeting',
+                    start: '2015-08-12T10:30:00',
+                    end: '2015-08-12T12:30:00'
+                },
+                {
+                    title: 'Lunch',
+                    start: '2015-08-12T12:00:00'
+                },
+                {
+                    title: 'Meeting',
+                    start: '2015-08-12T14:30:00'
+                },
+                {
+                    title: 'Happy Hour',
+                    start: '2015-08-12T17:30:00'
+                },
+                {
+                    title: 'Dinner',
+                    start: '2015-08-12T20:00:00'
+                },
+                {
+                    title: 'Birthday Party',
+                    start: '2015-08-13T07:00:00'
+                },
+                {
+                    title: 'Click for Google',
+                    url: 'http://google.com/',
+                    start: '2015-08-28'
+                }
+            ]
+        });
+        
+        $( ".title" ).fadeIn( 3000, function() {
+           
+          });
+        $( ".page-header" ).fadeIn( 3000, function() {
+           
+          });
+    });
+
+</script>
+</body>
+</html>
